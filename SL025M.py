@@ -80,9 +80,9 @@ def SELECT_RFID_CARD_SL025M (port,baudrate,timeout):
 			else:
 				RFID += chr(string).encode("hex")
 
-		return "RFID", RFID.upper() , "TYPE", type,TYPES[chr(type)] 
+		return "RFID",RFID.upper(),"TYPE",type,TYPES[chr(type)] 
 	else:
-		return "ERR","devcie_conn","Erro connecting port ", port
+		return "ERR","port_conn","connecting port", port
 
 
 print SELECT_RFID_CARD_SL025M ("/dev/ttyUSB0",115200,3)
